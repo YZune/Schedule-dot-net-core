@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Net;
 using System.Text;
@@ -16,7 +17,7 @@ namespace Schedule.Controllers
         readonly CookieContainer mycookie = new CookieContainer();
 
         [HttpGet("getCheckCode")]
-        public byte[] GetCheck()
+        public Image GetCheck()
         {
             return HttpHelper.GetCheckCode("http://xk.suda.edu.cn/CheckCode.aspx", mycookie);
         }
